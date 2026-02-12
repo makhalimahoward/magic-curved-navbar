@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bottom Nav</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+
+<body>
+
+    <div id="page" class="site">
+
+        <nav>
+
+            <ul>
+
+                <li class="active"><a href="#"><i class='bx bx-home-alt-2'></i></a></li>
+                
+                <li class="has_child">
+                    
+                    <a href="#"><i class='bx bx-chat'></i></a>
+
+                    <ul class="sub_menoo">
+
+                        <li><a href="#"><i class='bx bx-edit'></i></a></li>
+                        <li><a href="#"><i class='bx bxs-camera-off' ></i></a></li>
+                        <li><a href="#"><i class='bx bxs-camera-home'></i></a></li>
+
+                    </ul>
+                
+                </li>
+
+
+                <li class="has_child">
+                    
+                    <a href="#"><i class='bx bx-camera'></i></a>
+
+                    <ul class="sub_menoo">
+
+                        <li><a href="#"><i class='bx bx-edit'></i></a></li>
+                        <li><a href="#"><i class='bx bxs-camera-off' ></i></a></li>
+                        <li><a href="#"><i class='bx bxs-video'></i></a></li>
+                        <li><a href="#"><i class='bx bxs-camera-home'></i></a></li>
+
+                    </ul>
+
+                </li>
+
+                <li class="has_child">
+                    
+                    <a href="#"><i class='bx bx-world'></i></a>
+
+                    <ul class="sub_menoo">
+
+                        <li><a href="#"><i class='bx bx-edit'></i></a></li>
+                        <li><a href="#"><i class='bx bxs-camera-off' ></i></a></li>
+                        <li><a href="#"><i class='bx bxs-video'></i></a></li>
+                        <li><a href="#"><i class='bx bxs-camera-home'></i></a></li>
+                        <li><a href="#"><i class='bx bx-world'></i></a></li>
+
+                    </ul>
+                
+                </li>
+
+                <li class="has_child">
+                    
+                    <a href="#"><i class='bx bx-user'></i></a>
+
+                    <ul class="sub_menoo">
+
+                        <li><a href="#"><i class='bx bx-edit'></i></a></li>
+                        <li><a href="#"><i class='bx bxs-camera-off' ></i></a></li>
+                        <li><a href="#"><i class='bx bxs-video'></i></a></li>
+                        <li><a href="#"><i class='bx bxs-camera-home'></i></a></li>
+                        <li><a href="#"><i class='bx bx-world'></i></a></li>
+                        <li><a href="#"><i class='bx bxs-camera-off' ></i></a></li>
+
+                    </ul>
+                
+                </li>
+
+                <li class="last"></li>
+
+            </ul>
+
+        </nav>
+
+    </div>
+
+    <script>
+
+        const trigger = document.querySelectorAll('nav li');
+        trigger.forEach((menu) => menu.addEventListener('click', toggle));
+
+        function toggle () {
+            trigger.forEach((item) => item != this ? item.classList.remove('active') : null );
+            if (this.classList != 'active') {
+                this.classList.toggle('active')
+            }
+        }  
+
+    </script>
+    
+</body>
+
+</html>
